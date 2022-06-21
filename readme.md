@@ -40,7 +40,7 @@ module.exports = function (eleventyConfig) {
     github_edit_class: 'edit-on-github',
     github_edit_tag: 'a',
     github_edit_attributes: 'target="_blank" rel="noopener"',
-    github_edit_wrapper: null, //ex: "<div stuff>${edit_on_github}</div>"
+    github_edit_wrapper: undefined, //ex: "<div stuff>${edit_on_github}</div>"
   });
 };
 ```
