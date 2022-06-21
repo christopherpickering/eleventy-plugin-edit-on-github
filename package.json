@@ -1,7 +1,7 @@
 {
   "name": "eleventy-plugin-edit-on-github",
   "version": "1.0.0",
-  "description": "An Eleventy shortcode that generates an Edit On Github link.",
+  "description": "✍️ An Eleventy shortcode that adds an Edit On Github link to your pages.",
   "main": ".eleventy.js",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
