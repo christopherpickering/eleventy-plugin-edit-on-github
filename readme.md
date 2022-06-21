@@ -2,9 +2,16 @@
 
 <h4 align="center">An Eleventy <a href="https://www.11ty.dev/docs/shortcodes/">shortcode</a> to add an "Edit on Github" link to your pages.</h4>
 
+<p align="center">
+    <a href="https://twitter.com/intent/tweet?text=eleventy-plugin-edit-on-github%20%7C%20An%20Eleventy%20shortcode%20to%20add%20an%20%22Edit%20on%20Github%22%20link%20to%20your%20pages.&url=https://www.npmjs.com/package/eleventy-plugin-edit-on-github&hashtags=eleventy,eleventy-plugin,github"><img alt="tweet" src="https://img.shields.io/twitter/url/http/shields.io.svg?style=social" /></a>
+    <a href="https://www.npmjs.com/package/eleventy-plugin-edit-on-github"><img alt="npm" src="https://img.shields.io/npm/v/eleventy-plugin-edit-on-github"></a>
+</p>
+
 ## 🚀 Installation
 
-```
+Install from [npm](https://www.npmjs.com/package/eleventy-plugin-edit-on-github):
+
+```bash
 npm i -D eleventy-plugin-edit-on-github
 ```
 
@@ -24,7 +31,7 @@ Simply add this shortcode in your templates where you would like the link to app
 
 This plugin has one required parameter `github_edit_repo`, which should be the link to your github repository. If files are not at the root, you can also add the `github_edit_path` parameter.
 
-Check out the [sample](https://github.com/christopherpickering/eleventy-plugin-edit-on-github/sample/) site, or clone and run locally with `npm test`.
+Add to your Eleventy config file:
 
 ```js
 const editOnGithub = require('eleventy-plugin-edit-on-github');
@@ -44,3 +51,5 @@ module.exports = function (eleventyConfig) {
   });
 };
 ```
+
+Check out the [sample](https://github.com/christopherpickering/eleventy-plugin-edit-on-github/sample/) site, or clone and run locally with `npm test`.
