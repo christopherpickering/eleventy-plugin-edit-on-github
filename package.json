@@ -1,0 +1,59 @@
+{
+  "name": "eleventy-plugin-edit-on-github",
+  "version": "1.0.0",
+  "description": "An Eleventy shortcode that generates an Edit On Github link.",
+  "main": ".eleventy.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christopherpickering/eleventy-plugin-edit-on-github.git"
+  },
+  "bugs": {
+    "url": "https://github.com/christopherpickering/eleventy-plugin-edit-on-github/issues/"
+  },
+  "homepage": "https://github.com/christopherpickering/eleventy-plugin-edit-on-github",
+  "scripts": {
+    "test": "cd sample && npx @11ty/eleventy --serve",
+    "pre-commit": "lint-staged",
+    "format": "prettier --config .prettierrc \"**/*.{ts,css,less,scss,js,json,md,yaml,html}\" --write",
+    "commit": "git add . && npm run pre-commit && git add . && cz --no-verify"
+  },
+  "keywords": [
+    "eleventy",
+    "eleventy-plugin",
+    "11ty",
+    "github"
+  ],
+  "author": {
+    "name": "Christopher Pickering",
+    "url": "https://going.bg"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.4",
+    "@semantic-release/npm": "^9.0.1",
+    "cypress": "^10.1.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "lint-staged": "^13.0.2",
+    "prettier": "^2.7.1",
+    "semantic-release": "^19.0.3"
+  },
+  "lint-staged": {
+    "**/*.{ts,css,less,scss,js,json,md,yaml,html}": [
+      "npm run format"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
