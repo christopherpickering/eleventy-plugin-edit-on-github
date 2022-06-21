@@ -34,7 +34,7 @@ module.exports = (eleventyConfig, options = {}) => {
     const inputPath = value.inputPath.replace(/^\.\//, '');
     const edit_tag = `<${github_edit_tag} class="${github_edit_class}" href="${github_edit_repo}/edit/${github_edit_branch}/${github_edit_path}${inputPath}" ${github_edit_attributes}>${github_edit_text}</${github_edit_tag}>`;
 
-    if (github_edit_wrapper !== undefined) {
+    if (github_edit_wrapper !== undefined && github_edit_wrapper !== null) {
       return github_edit_wrapper.replace(/\$\{edit_on_github\}/, edit_tag);
     }
 
