@@ -52,4 +52,9 @@ module.exports = function (eleventyConfig) {
 };
 ```
 
-Check out the [sample](https://github.com/christopherpickering/eleventy-plugin-edit-on-github/sample/) site, or clone and run locally with `npm test`.
+Check out the [sample](https://github.com/christopherpickering/eleventy-plugin-edit-on-github/tree/master/sample) site, or clone and run locally with `npm test`.
+
+## 🦘 Out in the Wild
+
+- [djLint docs](https://djlint.com) > With i18n
+- [Atlas BI Library docs](https://www.atlas.bi/docs/bi-library/)
