@@ -15,10 +15,11 @@
   },
   "homepage": "https://github.com/christopherpickering/eleventy-plugin-edit-on-github",
   "scripts": {
-    "test": "cd sample && npx @11ty/eleventy --serve",
+    "test": "xo && cd sample && npx @11ty/eleventy --serve",
     "pre-commit": "lint-staged",
     "format": "prettier --config .prettierrc \"**/*.{ts,css,less,scss,js,json,md,yaml,html}\" --write",
-    "commit": "git add . && npm run pre-commit && git add . && cz --no-verify"
+    "commit": "git add . && npm run pre-commit && git add . && cz --no-verify",
+    "lint": "xo .eleventy.js"
   },
   "keywords": [
     "eleventy",
@@ -44,7 +45,8 @@
     "cz-conventional-changelog": "3.3.0",
     "lint-staged": "13.0.2",
     "prettier": "2.7.1",
-    "semantic-release": "19.0.3"
+    "semantic-release": "19.0.3",
+    "xo": "^0.50.0"
   },
   "lint-staged": {
     "**/*.{ts,css,less,scss,js,json,md,yaml,html}": [

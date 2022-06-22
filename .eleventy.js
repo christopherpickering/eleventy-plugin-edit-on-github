@@ -17,7 +17,9 @@ module.exports = (eleventyConfig, options = {}) => {
       ? ''
       : options.github_edit_path.replace(/^\//, '').replace(/\/$/, '') + '/';
   const github_edit_branch = options.github_edit_branch || 'master';
-  const github_edit_text = options.github_edit_text || 'Edit on Github';
+
+  const github_edit_text = options.github_edit_text;
+
   const github_edit_class =
     options.github_edit_class === undefined
       ? 'edit-on-github'
@@ -30,9 +32,19 @@ module.exports = (eleventyConfig, options = {}) => {
       : options.github_edit_attributes;
   const github_edit_wrapper = options.github_edit_wrapper;
 
-  eleventyConfig.addShortcode('gh_edit', (value) => {
-    const inputPath = value.inputPath.replace(/^\.\//, '');
-    const edit_tag = `<${github_edit_tag} class="${github_edit_class}" href="${github_edit_repo}/edit/${github_edit_branch}/${github_edit_path}${inputPath}" ${github_edit_attributes}>${github_edit_text}</${github_edit_tag}>`;
+  eleventyConfig.addShortcode('gh_edit', (page) => {
+    let github_edit_text_parsed = 'Edit on Github';
+
+    if (
+      Object.prototype.toString.call(github_edit_text) == '[object Function]'
+    ) {
+      github_edit_text_parsed = github_edit_text(page);
+    } else if (github_edit_text) {
+      github_edit_text_parsed = github_edit_text;
+    }
+
+    const inputPath = page.inputPath.replace(/^\.\//, '');
+    const edit_tag = `<${github_edit_tag} class="${github_edit_class}" href="${github_edit_repo}/edit/${github_edit_branch}/${github_edit_path}${inputPath}" ${github_edit_attributes}>${github_edit_text_parsed}</${github_edit_tag}>`;
 
     if (github_edit_wrapper !== undefined && github_edit_wrapper !== null) {
       return github_edit_wrapper.replace(/\$\{edit_on_github\}/, edit_tag);
