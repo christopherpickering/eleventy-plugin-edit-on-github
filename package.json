@@ -46,7 +46,7 @@
     "lint-staged": "13.0.3",
     "prettier": "2.7.1",
     "semantic-release": "19.0.3",
-    "xo": "^0.50.0"
+    "xo": "0.50.0"
   },
   "lint-staged": {
     "**/*.{ts,css,less,scss,js,json,md,yaml,html}": [
