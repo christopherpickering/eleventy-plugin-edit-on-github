@@ -1,6 +1,6 @@
 {
   "name": "eleventy-plugin-edit-on-github",
-  "version": "1.1.110",
+  "version": "1.1.111",
   "description": "✍️ An Eleventy shortcode that adds an Edit On Github link to your pages.",
   "main": ".eleventy.js",
   "publishConfig": {
@@ -39,13 +39,13 @@
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/commit-analyzer": "12.0.0",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "10.0.2",
+    "@semantic-release/github": "10.0.3",
     "@semantic-release/npm": "12.0.0",
     "cypress": "13.7.2",
     "cz-conventional-changelog": "3.3.0",
     "lint-staged": "15.2.2",
     "prettier": "3.2.5",
-    "semantic-release": "23.0.7",
+    "semantic-release": "23.0.8",
     "xo": "0.58.0"
   },
   "lint-staged": {
