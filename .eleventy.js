@@ -36,7 +36,7 @@ module.exports = (eleventyConfig, options = {}) => {
     let github_edit_text_parsed = 'Edit on Github';
 
     if (
-      Object.prototype.toString.call(github_edit_text) == '[object Function]'
+      Object.prototype.toString.call(github_edit_text) === '[object Function]'
     ) {
       github_edit_text_parsed = github_edit_text(page);
     } else if (github_edit_text) {

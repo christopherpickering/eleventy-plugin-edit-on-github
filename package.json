@@ -15,8 +15,9 @@
   },
   "homepage": "https://github.com/christopherpickering/eleventy-plugin-edit-on-github",
   "scripts": {
-    "test": "prettier --check . && eleventy --input=sample --output=sample/_site",
-    "format": "prettier --write ."
+    "test": "biome check . && eleventy --input=sample --output=sample/_site",
+    "lint": "biome check .",
+    "format": "biome check --write ."
   },
   "keywords": [
     "eleventy",
@@ -34,9 +35,9 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@biomejs/biome": "2.6.8",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "prettier": "^3.10.1",
     "semantic-release": "^25.0.9"
   }
 }
